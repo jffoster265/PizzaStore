@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Foster's Pizza</title>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+           
+            <h1>Joe Foster's Pizzaria</h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="Default.aspx">Foster's Pizzaria</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                    </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Default.aspx">Home</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="AboutUs.aspx">About Us</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="Order.aspx">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Register.aspx">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="OrderHistory.aspx">Order History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.aspx">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log Out</asp:LinkButton> </a>
+                    </li>
+                    
+                </ul>
+   </div>
+  </nav>
+</header>
+             <p id="statusMessage"><asp:Label ID="lblStatus" runat="server"></asp:Label></p>
+    
+            <asp:ContentPlaceHolder ID="main" runat="server">
+               
+            </asp:ContentPlaceHolder>
+        
+    </form>
+  </body>
+</html>
